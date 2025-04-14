@@ -194,7 +194,7 @@ function logger(func, logFunc) {
     const argsString = args.map((arg) => JSON.stringify(arg)).join(',');
     logFunc(`${func.name}(${argsString}) starts`);
 
-    const result = func(...args); 
+    const result = func(...args);
 
     logFunc(`${func.name}(${argsString}) ends`);
 
@@ -242,9 +242,9 @@ function getIdGeneratorFunction(startFrom) {
   let currentId = startFrom;
 
   return function () {
-    const id = currentId; 
-    currentId += 1; 
-    return id; 
+    const id = currentId;
+    currentId += 1;
+    return id;
   };
 }
 
